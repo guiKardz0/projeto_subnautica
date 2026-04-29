@@ -1,0 +1,64 @@
+@import url('https://fonts.cdnfonts.com/css/mobitale-original');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Mudar as características de todo o contúdo do body */
+body{
+    text-align: center;
+    background-color: rgb(0, 7, 27);
+    color: rgb(177, 224, 241) ;
+}
+
+/* Mudar as características de todo conteúdo do header */
+header{
+    background-color: rgb(10, 117, 199);
+    padding: 5px;
+}   
+
+h3{
+    font-family: 'Mobitale Original', sans-serif;
+    font-size: 30px;
+}
+
+p{
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Mudar as características de todo conteúdo dos links do nav */
+nav a{
+    color: rgb(253, 178, 9); /*Cor do texto*/
+    text-decoration: none; /*Remove a linha inferior do link*/
+    font-size: 30px; /*Muda o tamanho da fonte dos links do nav*/
+    display: inline-block; /*Muda o formato*/
+    background-color: rgb(44, 44, 44); /*Muda a cor de fundo as âncoras*/
+    margin: 10px; /*Adiciona margem externa entre as âncoras*/
+    padding: 10px 20px;/*Adiciona margem interna para as âncoras do nav*/
+    border-radius: 15px;/*Arredonda as arestas das caixas das âncoras*/
+}
+
+nav a:hover{
+    background-color: rgb(73, 111, 236);
+}
+
+nav{
+    background-color: rgb(6, 82, 141);
+}
+
+.card{
+    display: inline-block;
+    width: 300px;
+}
+
+.card img{
+    width: 100%;
+    background-color: rgb(10, 117, 199);
+    margin: 15px;
+    border-radius: 15px;
+}
