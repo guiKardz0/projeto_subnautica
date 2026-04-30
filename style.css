@@ -20,17 +20,6 @@ header{
     padding: 5px;
 }   
 
-h3{
-    font-family: 'Mobitale Original', sans-serif;
-    font-size: 30px;
-}
-
-p{
-    font-family: "Galindo", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* Mudar as características de todo conteúdo dos links do nav */
 nav a{
     color: rgb(253, 178, 9); /*Cor do texto*/
@@ -53,12 +42,94 @@ nav{
 
 .card{
     display: inline-block;
-    width: 300px;
+    width: 400px;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgba(6, 83, 141, 0.548);
+    border-radius: 10px;
 }
 
 .card img{
     width: 100%;
-    background-color: rgb(10, 117, 199);
-    margin: 15px;
+    height: 100%;
     border-radius: 15px;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+    background-color: rgb(0, 7, 27);
+}
+
+
+h2{
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#jogos h3{
+    font-size: 30px;
+}
+
+#jogos{
+    background-image: linear-gradient(rgba(0, 102, 255, 0.5), rgba(0, 0, 0, 0.5)), url(./imagens/subnautica_banner.jpg);
+    background-size: cover;
+    /*background-size: mexe no tamanho do plano de fundo/imagem | cover = esticar a imagem | contain = mantem o tamanho original*/
+    
+    background-repeat: no-repeat;
+    /*background-repeat: tira a repetição ou coloca repetição | no repeat = impede que a imagem se repita*/
+    
+    background-position: center;
+    /*background-position: altera a posição da minha imagem*/
+
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sub{
+    color: rgb(253, 178, 9);
+}
+
+.protagonistas{
+    display: inline-block;
+    width: 400px;
+    margin: 15px;
+    padding: 10px;
+    background-image:;
+    border-radius: 10px;
+    background-color: rgba(0, 7, 27, 0.464);
+}
+
+.protagonistas img{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.protagonistas h3{
+    font-size: 40px;
+}
+
+.protagonistas p{
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 5px;
+}
+
+.protagonistas:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+    background-color: rgb(0, 0, 0);
+}
+
+#personagens{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagens/ghost2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
