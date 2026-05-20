@@ -3,25 +3,33 @@
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0%;
     padding: 0%;
 }
 
-/* Mudar as características de todo o contúdo do body */
-body{
+
+body{ /* onfigurações da caixa que engloba todo o conteúdo do site*/
     text-align: center;
     background-color: rgb(0, 7, 27);
-    color: rgb(177, 224, 241) ;
+    color: rgb(177, 224, 241);
 }
 
-/* Mudar as características de todo conteúdo do header */
-header{
+
+
+
+/*Configurações do cabeçalho da página*/
+
+
+
+
+header{ /* Configurações das características de todo conteúdo do header */
     background-color: rgb(10, 117, 199);
     padding: 5px;
 }   
 
-/* Mudar as características de todo conteúdo dos links do nav */
-nav a{
+
+nav a{ /* Configurações das características de todo conteúdo dos links do nav */
     color: rgb(253, 178, 9); /*Cor do texto*/
     text-decoration: none; /*Remove a linha inferior do link*/
     font-size: 30px; /*Muda o tamanho da fonte dos links do nav*/
@@ -32,15 +40,25 @@ nav a{
     border-radius: 15px;/*Arredonda as arestas das caixas das âncoras*/
 }
 
-nav a:hover{
+nav a:hover{ /*Configurações de animação para quando o mouse está sobre os link do menu de navegação*/
     background-color: rgb(73, 111, 236);
+    transform:translateY(-5px);
+    transition: 0.5s;
 }
 
-nav{
+nav{ /*Configurações do menu de navegação do site*/
     background-color: rgb(6, 82, 141);
 }
 
-.card{
+
+
+
+/*CSS para a seção de Jogos*/
+
+
+
+
+.card{ /*Configurações das caixas que englobam os  cards de jogos*/
     display: inline-block;
     width: 400px;
     margin: 15px;
@@ -49,20 +67,20 @@ nav{
     border-radius: 10px;
 }
 
-.card img{
+.card img{ /*Configurações das imagens dos cards da seção jogos*/
     width: 100%;
     height: 100%;
     border-radius: 15px;
 }
 
-.card:hover{
+.card:hover{ /*Configurações da animação dos cards para quando o mouse está em cima*/
     transform: translateY(-20px);
     transition: 0.5s;
     background-color: rgb(0, 7, 27);
 }
 
 
-h2{
+#jogos h2{ /*Configurações do título da seção de jogos*/
     font-family: "Galindo", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -70,31 +88,50 @@ h2{
     font-size: 40px;
 }
 
-#jogos h3{
-    font-size: 30px;
-}
-
-#jogos{
+#jogos{ /*Configurações da caixa que engloba toda a seção de jogos*/
     background-image: linear-gradient(rgba(0, 102, 255, 0.5), rgba(0, 0, 0, 0.5)), url(./imagens/subnautica_banner.jpg);
     background-size: cover;
-    /*background-size: mexe no tamanho do plano de fundo/imagem | cover = esticar a imagem | contain = mantem o tamanho original*/
-    
     background-repeat: no-repeat;
-    /*background-repeat: tira a repetição ou coloca repetição | no repeat = impede que a imagem se repita*/
-    
     background-position: center;
-    /*background-position: altera a posição da minha imagem*/
-
     font-family: "Galindo", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding-bottom: 50px;
 }
 
-.sub{
+#jogos h3{ /*Configurações do título da seção de jogos*/
+    font-size: 30px;
+}
+
+.sub{ /*Configurações para a parte amarela dos títulos ">sub<nautica"*/
     color: rgb(253, 178, 9);
 }
 
-.protagonistas{
+
+
+
+
+/*CSS para a seção de personagens*/
+
+
+
+
+
+#personagens{ /*Configurações da caixa que engloba toda a seção de personagens*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagens/ghost2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#personagens h2{ /*Configurações do título da seção de personagens*/
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.protagonistas{ /*Configurações dos cards dos personagens*/
     display: inline-block;
     width: 400px;
     margin: 15px;
@@ -103,32 +140,55 @@ h2{
     background-color: rgba(1, 13, 45, 0.464);
 }
 
-.protagonistas img{
+.protagonistas img{ /*Configurações das imagens da seção de personagens*/
     width: 300px;
     height: 200px;
     border-radius: 15px;
     margin-top: 15px;
 }
 
-.protagonistas h3{
+.protagonistas h3{ /*Configurações dos nomes dos personagens*/
     font-size: 40px;
 }
 
-.protagonistas p{
+.protagonistas p{ /*Configurações das descrições dos personagens*/
     font-family: "Galindo", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: 5px;
 }
 
-.protagonistas:hover{
+.protagonistas:hover{ /*Configurações de animação para quando o mouse está em cima dos cards*/
     transform: translateY(-20px);
     transition: 0.5s;
     background-color: rgb(0, 0, 0);
 }
 
-#personagens{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagens/ghost2.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+
+/*CSS para o footer*/
+
+
+
+
+footer{ /*Configurações da caixa que engloba todo o footer*/
+    background-color: black;
+    padding: 100px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p{ /*Configurações do parágrafo do footer*/
+    font-family: "Galindo", sans-serif;
+    color: rgb(90, 90, 90);
+}
+
+footer a{ /*Configurações do link no footer*/
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
 }
