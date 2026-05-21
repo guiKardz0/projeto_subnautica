@@ -13,6 +13,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: url(./imagens/peeperCursor.png) auto;
 }
 
 .sub{ /*Configurações para a parte amarela dos títulos ">sub<nautica"*/
@@ -21,28 +22,37 @@ body{
 }
 
 
+
+
+
 /*Configurações do cabeçalho da página*/
+
 
 
 
 
 header{ /* Configurações das características de todo conteúdo do header */
     background-color: rgb(10, 117, 199);
-    padding: 5px;
     width: 100%;
     text-align: center;
 }   
 
+header img{ /*Configurações da imagem do cabeçalho*/
+    width: 75%;
+    padding: 10px;
+}
 
 nav a{ /* Configurações das características de todo conteúdo dos links do nav */
-    color: rgb(253, 178, 9); /*Cor do texto*/
-    text-decoration: none; /*Remove a linha inferior do link*/
-    font-size: 30px; /*Muda o tamanho da fonte dos links do nav*/
-    display: inline-block; /*Muda o formato*/
-    background-color: rgb(44, 44, 44); /*Muda a cor de fundo as âncoras*/
-    margin: 10px; /*Adiciona margem externa entre as âncoras*/
-    padding: 10px 20px;/*Adiciona margem interna para as âncoras do nav*/
-    border-radius: 15px;/*Arredonda as arestas das caixas das âncoras*/
+    color: rgb(253, 178, 9);
+    text-decoration: none;
+    font-size: 20px;
+    display: flexbox;
+    justify-content: center;
+    font-family: "Galindo", sans-serif;
+    background-color: rgb(44, 44, 44); 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 nav a:hover{ /*Configurações de animação para quando o mouse está sobre os link do menu de navegação*/
@@ -52,9 +62,10 @@ nav a:hover{ /*Configurações de animação para quando o mouse está sobre os 
 }
 
 nav{ /*Configurações do menu de navegação do site*/
-    background-color: rgb(6, 82, 141);
     display: flex;
     justify-content: center;
+    background-color: rgb(6, 82, 141);
+    width: 100%;
 }
 
 
@@ -66,9 +77,9 @@ nav{ /*Configurações do menu de navegação do site*/
 
 
 #biomas-subnautica{ /*Configurações da caixa que engloba todos os biomas do primeiro jogo*/
-    background-image: linear-gradient(rgba(0, 5, 46, 0.5)), url(./imagens/subnautica-map.jpg);
+    background-image: linear-gradient(rgba(0, 5, 45, 0.5)), url(./imagens/subnautica-map.jpg);
     background-size: cover;
-    background-repeat:no-repeat ;
+    background-repeat:no-repeat;
     background-position: center;
     color: white;
 }
@@ -77,17 +88,17 @@ nav{ /*Configurações do menu de navegação do site*/
     font-size: 40px;
     font-family: "Galindo", sans-serif;
     color: rgb(177, 224, 241);
+    padding: 50px;
     text-align: center;
-    padding-top: 50px;
 }
 
 .container-biomas-subnautica{
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 50px;
     gap: 30px;
     justify-content: center;
     align-items: stretch;
-    padding: 50px;
 }
 
 .card{ /*Configurações das caixas que são os cards*/
@@ -98,19 +109,99 @@ nav{ /*Configurações do menu de navegação do site*/
     background-color: rgba(6, 83, 141, 0.548);
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    transition: 1s;
 }
 
 .card img{ /*Configurações das imagens dos cards de biomas*/
     width: 100%;
     border-radius: 10px;
-    border: solid black 2px;
+    border: solid rgb(0, 5, 75) 2px;
+    margin-bottom: 15px;
 }
 
-.card:hover{
+.card h3{ /*Configurações de Título do card*/
+    font-family: "Galindo", sans-serif;
+    color: rgb(253, 178, 9);
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.card p{ /*Configurações da descrição */
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.tags{ /*Configurações das caixas que englobam as tags dos cards*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag{ /*Configurações individuais das tags dos cards*/
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/*Configurações das cores das tags*/
+
+.raso{
+    background-color: rgb(86, 171, 235);
+}
+
+.fundo{
+    background-color: rgb(2, 106, 185);
+}
+
+.profundo{
+    background-color: rgb(0, 7, 100);
+}
+
+.profundezas{
     background-color: rgb(0, 7, 27);
+}
+
+.dead{
+    background-color: black;
+}
+
+.seguro{
+    background-color: green;
+}
+
+.baixo{
+    background-color: rgb(123, 180, 0);
+}
+
+.medio{
+    background-color: rgb(255, 166, 0);
+}
+
+.alto{
+    background-color: rgb(193, 0, 0);
+}
+
+/*Fim das configurações das cores das tags*/
+
+.card a{
+    color: rgb(0, 255, 170);
+    font-weight: 900;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.card:hover{ /*Configurações da animação dos cards para quando o mouse está sobre eles*/
+    background-color: rgba(9, 13, 26, 0.75);
     transform: translateY(-10px);
-    width: 410px;
     transition: 1s;
+    box-shadow: 0 0 20px rgb(10, 117, 199);
 }
 
 
@@ -141,17 +232,20 @@ nav{ /*Configurações do menu de navegação do site*/
 
 footer{ /*Configurações da caixa que engloba todo o footer*/
     background-color: black;
-    padding: 100px 0px 20px 0px;
+    padding:20px 0px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    transition: 1s;
 }
 
 footer p{ /*Configurações do parágrafo do footer*/
     font-family: "Galindo", sans-serif;
     color: rgb(90, 90, 90);
+    padding: 150px 0px 0px 0px;
+    text-align: center;
 }
 
 footer a{ /*Configurações do link no footer*/
@@ -161,5 +255,34 @@ footer a{ /*Configurações do link no footer*/
     padding: 20px;
 }
 
+footer:hover{
+    color: rgb(253, 178, 9);
+    box-shadow: 0 0 20px rgb(2, 106, 185);
+    transition: 1s;
+}
 
 
+
+
+
+
+
+
+
+
+/* RESPONSIVO */
+
+
+
+
+
+@media(max-width:600px){
+    #biomas-subnautica h2{
+        font-size: 40px;
+    }
+
+    .card{
+        width: 100%;
+        margin: 0px 20px;
+    }
+}
